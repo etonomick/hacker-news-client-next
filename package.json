@@ -1,0 +1,30 @@
+{
+  "name": "hacker-news-client-next",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etonomick/hacker-news-client-next.git"
+  },
+  "keywords": [],
+  "author": "Valery Stepanov <etonomick@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/etonomick/hacker-news-client-next/issues"
+  },
+  "homepage": "https://github.com/etonomick/hacker-news-client-next#readme",
+  "dependencies": {
+    "@headlessui/react": "^1.6.5",
+    "autoprefixer": "^10.4.7",
+    "next": "^12.2.0",
+    "postcss": "^8.4.14",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.1.4"
+  }
+}
