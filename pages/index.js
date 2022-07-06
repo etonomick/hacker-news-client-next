@@ -1,5 +1,6 @@
 import { Tab } from "@headlessui/react"
 import { useEffect, useState } from "react"
+import Spinner from "../components/Spinner"
 import Story from "../components/Story"
 
 export default function Index() {
@@ -49,13 +50,15 @@ export default function Index() {
                         <Tab.Panel>
                             {stories[tab.type]
                                 ?
-                                <div className="pl-5 flex flex-col gap-3 divide-y">
+                                <div className="flex flex-col gap-3 divide-y">
                                     {stories[tab.type].map(story => (
                                         <Story item={story} />
                                     ))}
                                 </div>
                                 :
-                                <div>Loading...</div>}
+                                <div className="flex items-center justify-center">
+                                    <Spinner />
+                                </div>}
                         </Tab.Panel>
                     )
                 })}
