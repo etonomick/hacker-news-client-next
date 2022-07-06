@@ -1,5 +1,6 @@
 import { Tab } from "@headlessui/react"
 import { useEffect, useState } from "react"
+import Story from "../components/Story"
 
 export default function Index() {
 
@@ -39,22 +40,22 @@ export default function Index() {
                 {tabs.map(tab => (
                     <Tab
                         key={tab}
-                        className={({ selected }) => `w-full py-1 border-b-2 ${selected ? "outline:none focus:outline-none border-black font-medium" : "border-gray-300"}`}>{tab.title}</Tab>
+                        className={({ selected }) => `w-full py-1 border-b-2 ${selected ? "outline:none focus:outline-none border-black" : "border-gray-300"}`}>{tab.title}</Tab>
                 ))}
             </Tab.List>
             <Tab.Panels>
                 {tabs.map((tab, index) => {
                     return (
                         <Tab.Panel>
-                            {stories[tab.type] 
-                            ? 
-                            <div>
-                                {stories[tab.type].map(story => (
-                                    <div>{story.title}</div>
-                                ))}
-                            </div> 
-                            : 
-                            <div>Loading...</div>}
+                            {stories[tab.type]
+                                ?
+                                <div className="pl-5 flex flex-col gap-3 divide-y">
+                                    {stories[tab.type].map(story => (
+                                        <Story item={story} />
+                                    ))}
+                                </div>
+                                :
+                                <div>Loading...</div>}
                         </Tab.Panel>
                     )
                 })}

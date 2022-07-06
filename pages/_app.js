@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Header from "../components/Header"
 import "../styles/globals.css"
 
 export default function App({ Component, pageProps }) {
@@ -7,8 +8,8 @@ export default function App({ Component, pageProps }) {
             <Head>
                 <title>Hacker News Clinet</title>
             </Head>
-            <div className="flex flex-col p-5 gap-5" style={{ WebkitTapHighlightColor: 'transparent' }}>
-                <h1 className="text-2xl font-medium">Hacker News</h1>
+            <div className="flex flex-col gap-5" style={{ WebkitTapHighlightColor: 'transparent' }}>
+                <Header />
                 <Component {...pageProps} />
             </div>
         </>
