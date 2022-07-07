@@ -50,7 +50,7 @@ export default function Index() {
                         <Tab.Panel className="h-full">
                             {stories[tab.type]
                                 ?
-                                <div className="flex flex-col gap-3 divide-y">
+                                <div className="flex flex-col gap-5 divide-y pb-5">
                                     {stories[tab.type].map(story => (
                                         <Story item={story} />
                                     ))}

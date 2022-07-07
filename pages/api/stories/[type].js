@@ -1,7 +1,5 @@
 export default async function handler(req, res) {
 
-    const date = new Date()
-
     const { type } = req.query
 
     let ids = await fetch(`https://hacker-news.firebaseio.com/v0/${type}stories.json?print=pretty`).then(res => res.json())
