@@ -44,10 +44,10 @@ export default function Index() {
                         className={({ selected }) => `w-full py-1 border-b-2 ${selected ? "outline:none focus:outline-none border-black" : "border-gray-300"}`}>{tab.title}</Tab>
                 ))}
             </Tab.List>
-            <Tab.Panels>
+            <Tab.Panels className="h-full">
                 {tabs.map((tab, index) => {
                     return (
-                        <Tab.Panel>
+                        <Tab.Panel className="h-full">
                             {stories[tab.type]
                                 ?
                                 <div className="flex flex-col gap-3 divide-y">
@@ -56,7 +56,7 @@ export default function Index() {
                                     ))}
                                 </div>
                                 :
-                                <div className="flex items-center justify-center">
+                                <div className="flex items-center justify-center h-full">
                                     <Spinner />
                                 </div>}
                         </Tab.Panel>

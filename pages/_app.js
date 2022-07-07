@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }) {
             <Head>
                 <title>Hacker News Clinet</title>
             </Head>
-            <div className="flex flex-col gap-5" style={{ WebkitTapHighlightColor: 'transparent' }}>
+            <div className="flex flex-col gap-5 h-screen" style={{ WebkitTapHighlightColor: 'transparent' }}>
                 <Header />
                 <Component {...pageProps} />
             </div>
