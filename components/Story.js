@@ -9,7 +9,7 @@ export default function Story({ item }) {
                 </a>
             </Link>
             <div className="flex flex-row place-content-between">
-                <span>{item.by}</span>
+                <span>{item.domain}</span>
             </div>
         </div>
     )
